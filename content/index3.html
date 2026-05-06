@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruite - Strawberry Drink</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@900&display=swap" rel="stylesheet">
+    <style>
+        /* CSS LANGSUNG DI SINI */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        
+        body {
+            background: #ff2d55; /* Warna pink utama */
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 8%;
+            color: white;
+            z-index: 10;
+        }
+
+        .logo { font-family: 'Pacifico', cursive; font-size: 2rem; }
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin: 0 20px; }
+        nav ul li a { color: white; text-decoration: none; opacity: 0.9; }
+
+        .hero {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Teks besar di belakang */
+        .bg-text {
+            position: absolute;
+            font-size: 18vw;
+            font-weight: 900;
+            color: white;
+            opacity: 0.8;
+            letter-spacing: -5px;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* Produk di depan */
+        .product-img {
+            z-index: 5;
+            filter: drop-shadow(0 20px 50px rgba(0,0,0,0.3));
+        }
+
+        .product-img img {
+            height: 550px;
+        }
+
+        /* Stroberi melayang */
+        .fruit {
+            position: absolute;
+            z-index: 6;
+            width: 120px;
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
+        }
+
+        .f1 { top: 10%; left: 15%; transform: rotate(-15deg); }
+        .f2 { bottom: 10%; left: 20%; }
+        .f3 { top: 10%; right: 10%; }
+        .f4 { bottom: 5%; right: 15%; width: 180px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Fruite</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div>Choose Your Favorite Beer 🍓</div>
+    </header>
+
+    <section class="hero">
+        <h1 class="bg-text">STRAWBERRY</h1>
+        
+        <div class="product-img">
+            <!-- Gunakan gambar botol asli jika ada -->
+            <img src="https://png.pngtree.com/png-clipart/20240428/original/pngtree-trendy-strawberry-juice-png-image_14954431.png" alt="Can">
+        </div>
+
+        <!-- Stroberi PNG asli agar tidak ada kotak putih -->
+        <img src="https://www.pngmart.com/files/3/Strawberry-PNG-Picture.png" class="fruit f1">
+        <img src="https://www.pngmart.com/files/3/Strawberry-Transparent-Background.png" class="fruit f3">
+
+</body>
+</html>
